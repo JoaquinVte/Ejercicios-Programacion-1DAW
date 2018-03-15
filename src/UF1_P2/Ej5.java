@@ -3,7 +3,7 @@
 //Me “gusta” la programación
 //cada día mas
 
-package ejercicios;
+package UF1_P2;
 
 public class Ej5 {
 	public static void main (String[] args){

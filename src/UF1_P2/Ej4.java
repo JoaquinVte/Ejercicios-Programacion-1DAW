@@ -1,6 +1,6 @@
 //Un programa que pida el valor del radio y calcule el área del circulo para ese radio.
 
-package ejercicios;
+package UF1_P2;
 import java.util.Scanner;
 
 public class Ej4 {

@@ -1,6 +1,6 @@
 //Un programa que pida el valor del radio y calcule la longitud de la circunferencia para ese radio.
 
-package ejercicios;
+package UF1_P2;
 import java.util.Scanner;
 
 public class Ej3 {

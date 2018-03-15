@@ -1,6 +1,6 @@
 //Realiza un programa que genere letras aleatoriamente y determine si son vocales o consonantes.
 
-package ejercicios;
+package UF1_P2;
 
 public class Ej7 {
 	public static void main(String[] arg){

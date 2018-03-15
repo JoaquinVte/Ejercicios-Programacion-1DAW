@@ -4,7 +4,7 @@
 // 		System.out.println(i);
 // 	}
 
-package ejercicios;
+package UF1_P2;
 
 public class Ej1 {
 
