@@ -5,9 +5,9 @@ package ejercicios;
 public class Ej3 {
 
 	public static void main(String[] args) {
-		
-		int[] array=new int[100];
-		
+
+		int[] array = new int[100];
+
 		rellenarVector(array);
 		System.out.println("La suma de todos los elementos es: " + sumaVector(array));
 		System.out.println("La media del vector es: " + obtenerMedia(array));
@@ -29,7 +29,7 @@ public class Ej3 {
 
 		return suma / vector.length;
 	}
-	
+
 	public static int sumaVector(int[] numeros) {
 
 		int suma = 0;
