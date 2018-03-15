@@ -1,7 +1,8 @@
+//Realiza un programa que muestre las primeras 10 potencias de dos.
+
 package ejercicios;
 
 public class Ej2 {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// Realiza un programa que muestre las primeras 10 potencias de dos.
