@@ -9,17 +9,17 @@
 //
 //Notas para Jose:
 //
-//Matematicas:	********
+//Matematicas:		********
 //
-//Tecnologia:    *******
+//Tecnologia:    	*******
 //
-//Informatica:   ******
+//Informatica:   	******
 //
 //Ingles:           **
 //
-//Lengua:         *******
+//Lengua:         	*******
 //
-//Llengua:        *******
+//Llengua:        	*******
 //
 //Crea otro metodo como el anterior para visualizar las notas de una asignatura.
 
