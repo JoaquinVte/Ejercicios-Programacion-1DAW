@@ -13,11 +13,10 @@ public class PalindromoRecursivo {
 
 		Scanner entrada = new Scanner(System.in);
 		String texto;
-		boolean palindromo = true;
-		
-
+	
 		System.out.print("Introduce una texto: ");
-
+		
+		// Obtengo el texto y se pasa a minusculas, eliminando los espacios en blanco.
 		texto = entrada.nextLine().toLowerCase().replaceAll(" ", "");
 		
 		System.out.println("El texto es palindromo: " + Palindromo(texto));
