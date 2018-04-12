@@ -55,7 +55,16 @@ public class Persona {
 		letraDNI = generaLetraDNI();
 		peso = 0;
 		altura = 0;
-		sexo = comprobarSexo(sexo);
+		this.sexo = comprobarSexo(sexo);
+	}
+	public Persona(String nombre,int edad, char sexo, float peso, float altura){
+		this.nombre = nombre;
+		this.edad = edad;
+		DNI = generaDNI();
+		letraDNI = generaLetraDNI();
+		this.peso = peso;
+		this.altura = altura;
+		this.sexo = comprobarSexo(sexo);
 	}
 
 	public void setNombre(String nombre) {
