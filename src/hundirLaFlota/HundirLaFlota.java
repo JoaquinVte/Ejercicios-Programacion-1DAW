@@ -112,10 +112,17 @@ public class HundirLaFlota {
 	/*
 	 * Este metodo inicializa cada tablero de la siguiente manera:
 	 * 
-	 * A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ D ~ ~ ~
-	 * ~ ~ ~ ~ ~ ~ ~ E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ G ~ ~ ~ ~ ~ ~ ~
-	 * ~ ~ ~ H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 0
-	 * 1 2 3 4 5 6 7 8 9
+	 * A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+	 * B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+	 * C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+	 * D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+	 * E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+	 * F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+	 * G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+	 * H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+	 * I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+	 * J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+	 *   0 1 2 3 4 5 6 7 8 9
 	 */
 	public static void inicializarTablero(char[][] tablero) {
 		int fil, col;
