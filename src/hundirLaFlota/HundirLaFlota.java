@@ -103,7 +103,8 @@ public class HundirLaFlota {
 
 		// Reproducimos el sonido de game over
 		try {
-			sonido();
+			sonido("game-over.wav");
+			Thread.sleep(10000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -326,10 +327,24 @@ public class HundirLaFlota {
 				fallo = false;
 				tableroPC[vertical][horizontal] = 'T';
 				tableroDisparosJugador[vertical][horizontal] = 'T';
+				try {
+					sonido("acierto.wav");
+				} catch (LineUnavailableException | IOException | UnsupportedAudioFileException
+						| InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			} else if (tableroPC[vertical][horizontal] == '~') {
 				tableroPC[vertical][horizontal] = '*';
 				tableroDisparosJugador[vertical][horizontal] = '*';
 				fallo = false;
+				try {
+					sonido("fallo.wav");
+				} catch (LineUnavailableException | IOException | UnsupportedAudioFileException
+						| InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			} else {
 				System.out.println("Por favor marque una casilla correcta");
 			}
@@ -364,11 +379,11 @@ public class HundirLaFlota {
 		return disparo;
 	}
 
-	public static void sonido()
+	public static void sonido(String file)
 			throws LineUnavailableException, IOException, UnsupportedAudioFileException, InterruptedException {
 		Clip sonido = AudioSystem.getClip();
-		sonido.open(AudioSystem.getAudioInputStream(new File("game-over.wav")));
+		sonido.open(AudioSystem.getAudioInputStream(new File(file)));
 		sonido.start();
-		Thread.sleep(10000);
+		//Thread.sleep(10000);
 	}
 }
