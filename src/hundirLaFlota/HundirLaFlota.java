@@ -1,6 +1,13 @@
 package hundirLaFlota;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
+
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class HundirLaFlota {
 	public static void main(String[] args) {
@@ -80,8 +87,7 @@ public class HundirLaFlota {
 					break;
 				}
 			}
-			
-			
+
 		}
 
 		// Mostramos el nombre del ganador, si es la computadora, mostramos su
@@ -94,22 +100,22 @@ public class HundirLaFlota {
 			System.out.println(" Tablero computadora \t\t  Tablero Disparos \n");
 			visualizarTablero(tableroPC, tableroDisparosPC);
 		}
+
+		// Reproducimos el sonido de game over
+		try {
+			sonido();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	/*
-	 * Este metodo inicializa cada tablero de la siguiente manera: 
+	 * Este metodo inicializa cada tablero de la siguiente manera:
 	 * 
-	 * A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-	 * B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-	 * C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-	 * D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
-	 * E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-	 * F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-	 * G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-	 * H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-	 * I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-	 * J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-	 *   0 1 2 3 4 5 6 7 8 9
+	 * A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ D ~ ~ ~
+	 * ~ ~ ~ ~ ~ ~ ~ E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ G ~ ~ ~ ~ ~ ~ ~
+	 * ~ ~ ~ H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 0
+	 * 1 2 3 4 5 6 7 8 9
 	 */
 	public static void inicializarTablero(char[][] tablero) {
 		int fil, col;
@@ -321,7 +327,7 @@ public class HundirLaFlota {
 				System.out.println("Por favor marque una casilla correcta");
 			}
 		} while (fallo);
-		
+
 		return disparo;
 	}
 
@@ -338,8 +344,7 @@ public class HundirLaFlota {
 				fallo = false;
 			}
 		} while (fallo);
-		
-		
+
 		if (tableroJugador[vertical][horizontal] == 'B') {
 			disparo = true;
 			tableroJugador[vertical][horizontal] = 'T';
@@ -350,5 +355,13 @@ public class HundirLaFlota {
 		}
 
 		return disparo;
+	}
+
+	public static void sonido()
+			throws LineUnavailableException, IOException, UnsupportedAudioFileException, InterruptedException {
+		Clip sonido = AudioSystem.getClip();
+		sonido.open(AudioSystem.getAudioInputStream(new File("game-over.wav")));
+		sonido.start();
+		Thread.sleep(10000);
 	}
 }
